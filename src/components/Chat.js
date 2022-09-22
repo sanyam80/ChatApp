@@ -46,7 +46,9 @@ const Chat = () => {
         <Avatar src = {`https://avatars.dicebear.com/api/human/b${seed}.svg`}></Avatar>
         <div className = "chat_headerInfo">
             <h3>{roomName}</h3>
-            <p2>Last message..</p2>
+            <p>Last Seen {" "}
+            {new Date(messages[messages.length-1]?.timeStamp?.toDate()).toUTCString()}
+            </p>
         </div>
         <div className = "chat_headerRight">
         <IconButton>
@@ -62,10 +64,9 @@ const Chat = () => {
         </div>
         <div className = "chat_body">
           {messages.map(message=> (
-        <div className = {`chat_message${message.name===user.displayName && "chat_receiver"}`}>
-            <span className = "chat_name">{message.name}</span>
-            {/* <span className = "chat_timestamp">{new Date(message.timeStamp?.toDate()).toUTCString()}</span> */}
-          {message.message}
+        <div className = {`chat_message${message.name===user.displayName && ".chat_receiver"}`}>
+           <div className = "chat1_name">{message.name}</div>
+          <div className = "chat1_mess"> {message.messages}</div>
             </div>))}
              </div> 
         <div className = "chat_footer">

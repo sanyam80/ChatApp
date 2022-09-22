@@ -69,17 +69,19 @@
   padding:20px;
   cursor:pointer;
   border-radius: 1px solid #f6f6f6;
+  margin-top:-20px;
 }
 a{
   text-decoration: none;
   color:black;
 }
+
 .sidebarChat:hover{
   background:#ebebeb;
 }
 .sidebarChat_info{
   margin-left:15px;
-  margin-top:-14px;
+  margin-top:-10px;
 }
 
 .sidebarChat_info > h2{
@@ -123,33 +125,34 @@ a{
 }
 
 .chat_message{
-  position: relative;
+
   font-size:16px;
   padding:10px;
   width:fit-content;
   border-radius:10px;
   border-color:#ffffff;
   margin-bottom:30px;
- 
+   
  
 
   
  
 }
-.chat_name{
-  position:absolute;
+.chat1_name{
+  
 
-  padding-bottom:30px;
+ 
+ 
+
+  font-size:10px;
   font-weight: 800;
-
-  font-size:xx-small;
 
 }
 .chat_timestamp{
   margin-left:10px;
   font-size: xx-small;
 }
-.chat_receiver{
+/* .chat_receiver{
 position:absolute;
 right:100px;
   background-color: green;
@@ -157,7 +160,7 @@ right:100px;
   margin-left: 100px;
  /* margin-left: auto;
   background-color: #dcf8c6; */
-} 
+
 .txt{
   padding-top:10px;
 
@@ -219,4 +222,11 @@ margin-left:5px;
 .login_text{
   font-size: 40px;
   font-weight: 600;
+}
+.chat1_mess{
+  padding-bottom:10px;
+  font-size: 20px;
+}
+.chat_message{
+  background-color: #0a8d48;
 }
