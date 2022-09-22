@@ -123,14 +123,15 @@ a{
 }
 
 .chat_message{
-  position: absolute;
+  position: relative;
   font-size:16px;
   padding:10px;
   width:fit-content;
   border-radius:10px;
   border-color:#ffffff;
   margin-bottom:30px;
-  right:100px;
+ 
+ 
 
   
  
@@ -149,9 +150,13 @@ a{
   font-size: xx-small;
 }
 .chat_receiver{
- 
- margin-left: auto;
-  background-color: #dcf8c6;
+position:absolute;
+right:100px;
+  background-color: green;
+  width:fit-content;
+  margin-left: 100px;
+ /* margin-left: auto;
+  background-color: #dcf8c6; */
 } 
 .txt{
   padding-top:10px;
@@ -178,9 +183,40 @@ form >input{
   border:none;
 }
 form > button{
- display:none;
+margin-left:5px;
 }
 .chat_footer > .MuiSvgIcon-root{
   padding:10px;
   color:gray;
+}
+.login{
+  background-color: #f8f8f8;
+  height:100vh;
+  width:100vw;
+  display:grid;
+  place-items: center;
+}
+.login_container{
+  padding:100px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.75);
+  /* margin:100px; */
+}
+.login_container >img{
+  object-fit: contain;
+  height:100px;
+  margin-bottom: 5px;
+}
+.login_container >button{
+  margin-top:30px;
+  color:white;
+  text-transform: inherit;
+  background-color: #0a8d48;
+  padding: 10px;
+}
+.login_text{
+  font-size: 40px;
+  font-weight: 600;
 }

@@ -8,7 +8,9 @@ import "../App.css"
 import  SearchOutlined  from '@material-ui/icons/SearchOutlined';
 import SidebarChat from './SidebarChat';
 import db from "../firebase.js"
+import { useStateValue } from './StateProvider';
 const Sidebar = () => {
+  const[{user},dispatch] = useStateValue();
   const [rooms,setrooms] = useState([]);
   useEffect(()=>{
    db.collection('rooms').onSnapshot(snapshot=>{
@@ -23,7 +25,7 @@ const Sidebar = () => {
   return (
     <div className = "sidebar">
         <div className = "sidebar_header">
-            <Avatar></Avatar>
+            <Avatar src = {user?.photoURL}></Avatar>
             <div className = "sidebar_headerRight">
                 <IconButton>
                    <DonutLargeIcon></DonutLargeIcon>
@@ -52,4 +54,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Sidebar;
